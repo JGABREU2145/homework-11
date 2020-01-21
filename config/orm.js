@@ -48,7 +48,7 @@ var orm = {
 
         connection.query(queryString, vals, function(err,result) {
             if(err) throw err;
-            cb(results);
+            cb(result);
         });
     },
     update: function(table, objColVals, condition, cb) {

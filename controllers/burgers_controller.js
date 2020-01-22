@@ -6,9 +6,10 @@ var burger = require("../models/burger");
 router.get("/", function(req, res) {
     burger.all(function(data) {
         var handlebarObject = {
-            bugers: data
+            burgers: data
         };
-        console.log(handlebarObject);
+        console.log(handlebarObject );
+        console.log("This comes from BC 11");
         res.render("index", handlebarObject);
     });
 });

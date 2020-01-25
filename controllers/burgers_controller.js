@@ -7,8 +7,9 @@ router.get("/", function(req, res) {
     burger.all(function(data) {
         var handlebarObject = {
             burgers: data
-        };
-        console.log(handlebarObject );
+            };
+        console.log(data)
+        //console.log(handlebarObject );
         console.log("This comes from BC 11");
         res.render("index", handlebarObject);
     });
@@ -16,7 +17,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function (req, res) {
     burger.create([
-        "name", "devoured"
+        "burger_name", "devoured"
     ], [
         req.body.name, req.body.devoured
     ], function(result) {
